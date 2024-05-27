@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel Margin="10">
             <Label Content="Выберите тест" />
-            <ComboBox x:Name="cmbTests" Margin="10" SelectionChanged="cmbTests_SelectionChanged"/>
+            <ComboBox x:Name="cmbTests" Margin="10" SelectionChanged="cmbTests_SelectionChanged" DisplayMemberPath="Title"/>
             <Button Content="Начать тест" Click="StartTestButton_Click" Margin="10"/>
 
             <Label x:Name="lblQuestion" Content="Вопрос" Visibility="Collapsed" />
