@@ -1,0 +1,33 @@
+﻿<Window x:Class="Questionnaire.Views.Windows.AdministrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Questionnaire.Views.Windows"
+        mc:Ignorable="d"
+        Title="AdministrationWindow" Height="450" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="233*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <ListBox x:Name="lstTests" Margin="10" DisplayMemberPath="Title"/>
+            <Button Content="Удалить тест" Margin="10" Click="DeleteTestButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="10,10,10,10">
+            <Label Content="Название теста" />
+            <TextBox x:Name="txbTestTitle" Margin="10"/>
+            <Button Content="Добавить тест" Click="AddTestButton_Click" Margin="10"/>
+
+            <Label Content="Вопрос" />
+            <TextBox x:Name="txbQuestion" Margin="10"/>
+            <Label Content="Ответы (введите один ответ на строку, пометьте правильный ответ знаком '*')" />
+            <TextBox x:Name="txbAnswers" Margin="10" AcceptsReturn="True" Height="100"/>
+
+            <Button Content="Добавить вопрос" Click="AddQuestionButton_Click" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>

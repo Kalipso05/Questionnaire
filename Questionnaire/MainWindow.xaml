@@ -1,0 +1,21 @@
+﻿<Window x:Class="Questionnaire.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Questionnaire"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10">
+            <Label Content="Выберите тест" />
+            <ComboBox x:Name="cmbTests" Margin="10" SelectionChanged="cmbTests_SelectionChanged"/>
+            <Button Content="Начать тест" Click="StartTestButton_Click" Margin="10"/>
+
+            <Label x:Name="lblQuestion" Content="Вопрос" Visibility="Collapsed" />
+            <ListBox x:Name="lstAnswers" Margin="10" Visibility="Collapsed"/>
+
+            <Button x:Name="btnNext" Content="Следующий вопрос" Click="NextQuestionButton_Click" Margin="10" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Window>
